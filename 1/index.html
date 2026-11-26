@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aegis Core — ინფრასტრუქტურის დაცვა და აუდიტი</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="top-anchor"></div>
+
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a href="#main" class="brand-logo" data-view="home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-name">Aegis Core</span>
+      </a>
+
+      <nav class="main-nav" aria-label="მთავარი ნავიგაცია">
+        <button type="button" class="nav-link is-active" data-view="home">სისტემა</button>
+        <button type="button" class="nav-link" data-view="contact">კონტაქტი</button>
+        <button type="button" class="nav-link" data-view="auth">შესვლა / რეგისტრაცია</button>
+      </nav>
+
+      <div class="header-actions">
+        <span class="fav-counter" id="fav-counter" title="შენახული სერვისები">ფავორიტები: 0</span>
+        <button type="button" class="btn btn-primary" data-view="contact">მოთხოვნის გაგზავნა</button>
+      </div>
+
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-label="მენიუს გახსნა" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <div class="mobile-nav" id="mobile-nav">
+      <button type="button" class="mobile-nav-link" data-view="home">სისტემა</button>
+      <button type="button" class="mobile-nav-link" data-view="contact">კონტაქტი</button>
+      <button type="button" class="mobile-nav-link" data-view="auth">შესვლა / რეგისტრაცია</button>
+    </div>
+  </header>
+
+  <main id="main">
+   
+    <div id="view-home" class="page-view is-visible">
+
+     
+      <section class="section hero-section reveal-section">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">ინფრასტრუქტურული დაცვა და აუდიტი</p>
+            <h1>ვპოულობთ და ვხურავთ რეალურ ხარვეზებს სისტემებში გაშვებამდე</h1>
+            <p class="hero-lead">
+              ვამოწმებთ ვებ-აპლიკაციებს, API წერტილებს, Cloud კონფიგურაციებს და ქსელურ სეგმენტებს.
+              თითოეულ აღმოჩენილ ხარვეზს მოჰყვება გამოსწორების კონკრეტული ნაბიჯები და გადამოწმება.
+            </p>
+            <div class="hero-actions">
+              <button type="button" class="btn btn-primary" data-view="contact">აუდიტის დაგეგმვა</button>
+              <a href="#services-grid-section" class="btn btn-ghost">სერვისების სია</a>
+            </div>
+          </div>
+
+          <aside class="glass-panel telemetry-box" aria-label="სისტემური მონაცემები">
+            <div class="telemetry-head">
+              <span class="status-dot" aria-hidden="true"></span>
+              <span class="telemetry-title">ბოლო შემოწმების სტატუსი</span>
+              <span class="telemetry-meta">v4.2</span>
+            </div>
+
+            <div class="telemetry-rows">
+              <div class="telemetry-row">
+                <span>პორტების და სერვისების სკანი</span>
+                <strong class="metric-ok">დასრულებულია</strong>
+              </div>
+              <div class="telemetry-row">
+                <span>TLS / სერტიფიკატების ვადა</span>
+                <strong>TLS 1.3 აქტიური</strong>
+              </div>
+              <div class="telemetry-row">
+                <span>საშუალო რეაგირების დრო</span>
+                <strong>14 წუთი</strong>
+              </div>
+            </div>
+
+            <div class="score-bar-wrap">
+              <div class="score-bar-labels">
+                <span>კონფიგურაციის შეფასება</span>
+                <strong>92 / 100</strong>
+              </div>
+              <div class="score-track">
+                <div class="score-fill" style="width: 92%;"></div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+      <section class="section services-section reveal-section" id="services-grid-section">
+        <div class="container">
+          <div class="section-header-asym">
+            <div>
+              <p class="eyebrow">სერვისების კატალოგი</p>
+              <h2>რას ვაკეთებთ კონკრეტულად</h2>
+            </div>
+            <p class="section-note">
+              აირჩიეთ საჭირო მიმართულება ან შეინახეთ ფავორიტებში სურათზე განთავსებული ღილაკით.
+            </p>
+          </div>
+
+          <div class="filter-bar" role="tablist" aria-label="სერვისების ფილტრი">
+            <button type="button" class="filter-btn is-active" data-filter="all">ყველა</button>
+            <button type="button" class="filter-btn" data-filter="testing">ტესტირება</button>
+            <button type="button" class="filter-btn" data-filter="cloud">Cloud და ქსელი</button>
+            <button type="button" class="filter-btn" data-filter="compliance">სტანდარტები</button>
+          </div>
+
+          <div class="services-grid" id="services-grid">
+            <!-- Card 1 -->
+            <article class="glass-panel service-card" data-category="testing" data-id="pentest">
+              <div class="card-media">
+                <img
+                  src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=80"
+                  alt="სერვერული და ქსელური ინფრასტრუქტურა"
+                  loading="lazy"
+                />
+                <button
+                  type="button"
+                  class="fav-btn"
+                  data-fav-id="pentest"
+                  aria-label="Penetration Testing ფავორიტებში დამატება"
+                  aria-pressed="false"
+                >
+                  <span class="fav-icon" aria-hidden="true">♥</span>
+                  <span class="fav-label">ფავორიტი</span>
+                </button>
+              </div>
+              <div class="card-body">
+                <span class="card-tag">ტესტირება</span>
+                <h3>Penetration Testing</h3>
+                <p>
+                  ვამოწმებთ ავტორიზაციის, API-ს და ბიზნეს-ლოგიკის სისუსტეებს.
+                  გაწვდით რეპორტს, სადაც მითითებულია შეტევის გზა და კოდის დონის შესწორება.
+                </p>
+                <div class="card-footer">
+                  <span class="card-spec">ვადა: 5 სამუშაო დღე</span>
+                  <button type="button" class="text-action" data-view="contact">მოთხოვნა →</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="glass-panel service-card" data-category="cloud" data-id="cloud-review">
+              <div class="card-media">
+                <img
+                  src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=900&q=80"
+                  alt="ღრუბლოვანი სისტემების ქსელური რუკა"
+                  loading="lazy"
+                />
+                <button
+                  type="button"
+                  class="fav-btn"
+                  data-fav-id="cloud-review"
+                  aria-label="Cloud კონფიგურაციის აუდიტი ფავორიტებში დამატება"
+                  aria-pressed="false"
+                >
+                  <span class="fav-icon" aria-hidden="true">♥</span>
+                  <span class="fav-label">ფავორიტი</span>
+                </button>
+              </div>
+              <div class="card-body">
+                <span class="card-tag">Cloud და ქსელი</span>
+                <h3>Cloud კონფიგურაციის აუდიტი</h3>
+                <p>
+                  ვამოწმებთ IAM უფლებებს, S3/Storage წვდომებს, Security Group წესებს და სარეზერვო ასლების აღდგენას,
+                  რომ შემთხვევით ღია რესურსი ან ზედმეტი პრივილეგია არ დარჩეს.
+                </p>
+                <div class="card-footer">
+                  <span class="card-spec">AWS / Azure / GCP</span>
+                  <button type="button" class="text-action" data-view="contact">მოთხოვნა →</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="glass-panel service-card" data-category="cloud" data-id="soc-monitor">
+              <div class="card-media">
+                <img
+                  src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=900&q=80"
+                  alt="მონაცემთა ნაკადის და ლოგების ანალიზი"
+                  loading="lazy"
+                />
+                <button
+                  type="button"
+                  class="fav-btn"
+                  data-fav-id="soc-monitor"
+                  aria-label="ლოგების და ინციდენტების მონიტორინგი ფავორიტებში დამატება"
+                  aria-pressed="false"
+                >
+                  <span class="fav-icon" aria-hidden="true">♥</span>
+                  <span class="fav-label">ფავორიტი</span>
+                </button>
+              </div>
+              <div class="card-body">
+                <span class="card-tag">Cloud და ქსელი</span>
+                <h3>ლოგების და ინციდენტების მონიტორინგი</h3>
+                <p>
+                  ვაგროვებთ სერვერების, ავტორიზაციის და Firewall-ის ლოგებს ერთ წერტილში,
+                  ვაყენებთ უჩვეულო აქტივობის შეტყობინებებს და ვმონაწილეობთ ინციდენტის გარჩევაში.
+                </p>
+                <div class="card-footer">
+                  <span class="card-spec">SIEM + Alerting</span>
+                  <button type="button" class="text-action" data-view="contact">მოთხოვნა →</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="glass-panel service-card" data-category="compliance" data-id="iso-gap">
+              <div class="card-media">
+                <img
+                  src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&fit=crop&w=900&q=80"
+                  alt="ტექნიკური დოკუმენტაცია და კოდის სტრუქტურა"
+                  loading="lazy"
+                />
+                <button
+                  type="button"
+                  class="fav-btn"
+                  data-fav-id="iso-gap"
+                  aria-label="ISO 27001 მზაობის შეფასება ფავორიტებში დამატება"
+                  aria-pressed="false"
+                >
+                  <span class="fav-icon" aria-hidden="true">♥</span>
+                  <span class="fav-label">ფავორიტი</span>
+                </button>
+              </div>
+              <div class="card-body">
+                <span class="card-tag">სტანდარტები</span>
+                <h3>ISO 27001 მზაობის შეფასება</h3>
+                <p>
+                  ვადარებთ არსებულ წესებს, წვდომის მართვას და დოკუმენტაციას ISO 27001 მოთხოვნებს
+                  და ვადგენთ პრაქტიკულ სამოქმედო გეგმას სერტიფიცირებამდე.
+                </p>
+                <div class="card-footer">
+                  <span class="card-spec">Gap Analysis</span>
+                  <button type="button" class="text-action" data-view="contact">მოთხოვნა →</button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section checker-section reveal-section">
+        <div class="container checker-grid">
+          <div class="glass-panel checker-controls">
+            <p class="eyebrow">სწრაფი შემოწმება</p>
+            <h2>საბაზისო მზაობის შეფასება</h2>
+            <p class="checker-desc">
+              მონიშნეთ, რა გაქვთ უკვე დანერგილი გუნდში და რამდენი თანამშრომელი მუშაობს სისტემებთან.
+            </p>
+
+            <div class="range-group">
+              <div class="range-top">
+                <label for="team-size">თანამშრომლების რაოდენობა</label>
+                <span id="team-size-value">40</span>
+              </div>
+              <input type="range" id="team-size" min="5" max="300" step="5" value="40" />
+            </div>
+
+            <div class="checklist-grid">
+              <label class="check-item">
+                <input type="checkbox" id="chk-mfa" checked />
+                <span>2FA / MFA ყველა ანგარიშზე</span>
+              </label>
+              <label class="check-item">
+                <input type="checkbox" id="chk-backup" checked />
+                <span>ტესტირებული სარეზერვო ასლები</span>
+              </label>
+              <label class="check-item">
+                <input type="checkbox" id="chk-least" />
+                <span>მინიმალური პრივილეგიების წესი</span>
+              </label>
+              <label class="check-item">
+                <input type="checkbox" id="chk-patch" />
+                <span>პაკეტების და სერვერების განახლება</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="glass-panel checker-result">
+            <span class="result-label">მიმდინარე მაჩვენებელი</span>
+            <div class="result-score" id="readiness-score">65%</div>
+            <p class="result-status" id="readiness-status">საბაზისო დონე — დასაზუსტებელია წვდომები</p>
+            <p class="result-advice" id="readiness-advice">
+              გირჩევთ გადახედოთ ადმინისტრაციულ წვდომებს და სერვერების განახლების სიხშირეს.
+            </p>
+            <button type="button" class="btn btn-primary" data-view="contact">კონსულტაციის მოთხოვნა</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section outcomes-section reveal-section">
+        <div class="container">
+          <div class="section-header-asym">
+            <div>
+              <p class="eyebrow">პრაქტიკული შედეგები</p>
+              <h2>რას ცვლის აუდიტი რეალურ პროექტში</h2>
+            </div>
+            <p class="section-note">
+              კონკრეტული მაგალითები კლიენტების ინფრასტრუქტურიდან.
+            </p>
+          </div>
+
+          <div class="outcomes-layout">
+            <article class="glass-panel outcome-card outcome-featured">
+              <span class="outcome-meta">ფინანსური სერვისი · API და ავტორიზაცია</span>
+              <h3>ტრანზაქციების სტატუსის შემოწმების ხარვეზის აღმოფხვრა რელიზამდე</h3>
+              <p>
+                ტესტირებისას გამოვლინდა, რომ ერთ-ერთ შიდა endpoint-ს აკლდა როლის შემოწმება სხვა მომხმარებლის ID-ზე.
+                ხარვეზი დაიხურა გაშვებამდე, დაემატა ინტეგრაციული ტესტები და ლოგირება.
+              </p>
+            </article>
+
+            <article class="glass-panel outcome-card">
+              <span class="outcome-meta">ელ-კომერცია · Cloud Storage</span>
+              <h3>საწყობის ბექაფების წვდომის შეზღუდვა</h3>
+              <p>
+                გაიმიჯნა CI/CD სერვერის და ადმინისტრატორის გასაღებები, შეიზღუდა bucket პოლიტიკები მხოლოდ საჭირო IP-ებზე.
+              </p>
+            </article>
+
+            <article class="glass-panel outcome-card">
+              <span class="outcome-meta">ლოგისტიკა · VPN და SSH</span>
+              <h3>სერვერებზე პირდაპირი პაროლით შესვლის გათიშვა</h3>
+              <p>
+                SSH წვდომა გადავიდა მხოლოდ გასაღებებსა და VPN სეგმენტზე, შემცირდა ავტომატური brute-force მცდელობები.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <section id="view-contact" class="page-view subpage-section">
+      <div class="container subpage-grid">
+        <div class="subpage-info">
+          <p class="eyebrow">კონტაქტი</p>
+          <h1>დაგვიკავშირდით პროექტის დეტალებზე</h1>
+          <p class="hero-lead">
+            მოგვწერეთ მოკლედ თქვენი სისტემის შესახებ — რა აპლიკაცია ან ინფრასტრუქტურა გაქვთ და რა ვადაში გჭირდებათ შემოწმება.
+          </p>
+
+          <div class="glass-panel contact-details">
+            <div class="contact-item">
+              <strong>მისამართი</strong>
+              <span>თბილისი, ი. ჭავჭავაძის გამზ. 37</span>
+            </div>
+            <div class="contact-item">
+              <strong>ელ-ფოსტა</strong>
+              <span>hello@aegiscore.ge</span>
+            </div>
+            <div class="contact-item">
+              <strong>სამუშაო საათები</strong>
+              <span>ორშაბათი – პარასკევი, 10:00 – 19:00</span>
+            </div>
+          </div>
+        </div>
+
+        <form class="glass-panel form-card" id="contact-form">
+          <h2>მოთხოვნის ფორმა</h2>
+
+          <div class="field-group">
+            <label for="contact-name">სახელი და გვარი</label>
+            <input type="text" id="contact-name" name="name" placeholder="მაგ: ნინო კობახიძე" required />
+          </div>
+
+          <div class="field-group">
+            <label for="contact-email">ელ-ფოსტა</label>
+            <input type="email" id="contact-email" name="email" placeholder="nino@company.ge" required />
+          </div>
+
+          <div class="field-group">
+            <label for="contact-topic">სერვისის მიმართულება</label>
+            <select id="contact-topic" name="topic">
+              <option value="pentest">Penetration Testing</option>
+              <option value="cloud">Cloud კონფიგურაციის აუდიტი</option>
+              <option value="soc">ლოგების და ინციდენტების მონიტორინგი</option>
+              <option value="iso">ISO 27001 მზაობის შეფასება</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label for="contact-message">მოკლე აღწერა</label>
+            <textarea id="contact-message" name="message" rows="4" placeholder="რისი შემოწმება გსურთ და რა ვადებში..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full">გაგზავნა</button>
+          <p class="form-feedback" id="contact-feedback" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+    <section id="view-auth" class="page-view subpage-section">
+      <div class="container auth-wrapper">
+        <div class="glass-panel auth-card">
+          <div class="auth-tabs" role="tablist" aria-label="ავტორიზაციის რეჟიმი">
+            <button type="button" class="auth-tab is-active" id="tab-login" data-auth-mode="login">შესვლა</button>
+            <button type="button" class="auth-tab" id="tab-register" data-auth-mode="register">რეგისტრაცია</button>
+          </div>
+
+          <form id="login-form" class="auth-form is-active">
+            <h2>ანგარიშში შესვლა</h2>
+            <p class="auth-sub">შედით თქვენი სამუშაო ელ-ფოსტით ანგარიშის სანახავად.</p>
+
+            <div class="field-group">
+              <label for="login-email">ელ-ფოსტა</label>
+              <input type="email" id="login-email" placeholder="name@company.ge" required />
+            </div>
+
+            <div class="field-group">
+              <label for="login-password">პაროლი</label>
+              <input type="password" id="login-password" placeholder="••••••••" required />
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full">შესვლა</button>
+          </form>
+
+          <!-- Register Form -->
+          <form id="register-form" class="auth-form">
+            <h2>ახალი ანგარიშის შექმნა</h2>
+            <p class="auth-sub">შექმენით პროფილი მოთხოვნების და შენახული სერვისების სამართავად.</p>
+
+            <div class="field-group">
+              <label for="reg-name">სრული სახელი</label>
+              <input type="text" id="reg-name" placeholder="მაგ: გიორგი მაისურაძე" required />
+            </div>
+
+            <div class="field-group">
+              <label for="reg-email">ელ-ფოსტა</label>
+              <input type="email" id="reg-email" placeholder="giorgi@company.ge" required />
+            </div>
+
+            <div class="field-group">
+              <label for="reg-password">პაროლი (მინ. 8 სიმბოლო)</label>
+              <input type="password" id="reg-password" minlength="8" placeholder="მინიმუმ 8 სიმბოლო" required />
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full">რეგისტრაცია</button>
+          </form>
+
+          <p class="form-feedback" id="auth-feedback" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-name">Aegis Core</span>
+        <p>ინფრასტრუქტურული აუდიტი, ტესტირება და კონფიგურაციის შემოწმება.</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>გვერდები</h3>
+        <ul>
+          <li><button type="button" class="footer-link" data-view="home">მთავარი</button></li>
+          <li><button type="button" class="footer-link" data-view="contact">კონტაქტი</button></li>
+          <li><button type="button" class="footer-link" data-view="auth">შესვლა / რეგისტრაცია</button></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>კონტაქტი</h3>
+        <ul>
+          <li>hello@aegiscore.ge</li>
+          <li>+995 32 240 18 90</li>
+          <li>თბილისი, ჭავჭავაძის გამზ. 37</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© 2026 Aegis Core</span>
+      <span>ყველა უფლება დაცულია</span>
+    </div>
+  </footer>
+
+  <button
+    type="button"
+    class="scroll-top-btn"
+    id="scroll-top-btn"
+    aria-label="ჰედერზე დაბრუნება"
+    title="ჰედერზე დაბრუნება"
+  >
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
